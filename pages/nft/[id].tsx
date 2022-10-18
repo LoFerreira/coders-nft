@@ -18,7 +18,7 @@ const NFTDetails = ({}: NFTDetailsProps) => {
   const router = useRouter();
 
   const marketPlace = useContract(
-    "0x52206056BD9bda5DF814A427C4F599f486AF73f1"
+    process.env.NEXT_PUBLIC_MARKETPLACE_CONTRACT
   ) as any;
   const { data: listings } = useListings(marketPlace.contract);
 
