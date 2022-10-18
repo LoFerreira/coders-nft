@@ -11,7 +11,7 @@ const NFTCard = ({ listing }: NFTCardProps) => {
   const router = useRouter();
   const handleNFTClick = useCallback(() => {
     router.push(`/nft/${listing.id}`);
-  }, []);
+  }, [listing.id]);
   return (
     <div
       className="w-[24rem] h-[31rem] bg-[#242634] rounded-[1.25rem] cursor-pointer hover:scale-105"

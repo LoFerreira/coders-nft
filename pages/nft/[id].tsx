@@ -46,7 +46,7 @@ const NFTDetails = ({}: NFTDetailsProps) => {
       setLoadingPurchase(false);
       Notify.failure("Failed to buy this NFT!");
     }
-  }, []);
+  }, [listing, marketPlace?.contract?.direct]);
 
   return (
     <div className="px-[10%] min-h-[80vh]">
